@@ -48,6 +48,7 @@ void selectionSort(int arr[], int n)
         for (int j = i + 1; j < n; j++)
             if (arr[j] < arr[min_idx])
                 min_idx = j;
+
         swap(&arr[min_idx], &arr[i]);
     }
 }
@@ -129,61 +130,69 @@ void printArray(int arr[], int n)
 
 int main()
 {
-    int n = 10;
+    int n = 500000;
     int arr[n];
 
     // Seed random number
     srand(time(NULL));
 
-    // Initialize array with random values
-    seedArray(arr, n);
-    printf("Original array:\n");
-    printArray(arr, n);
+    // // Initialize array with random values
+    // seedArray(arr, n);
+    // printf("Original array:\n");
+    // printArray(arr, n);
 
-    // Bubble Sort
-    bubbleSort(arr, n);
-    printf("Sorted array (Bubble Sort):\n");
-    printArray(arr, n);
+    // // Bubble Sort
+    // bubbleSort(arr, n);
+    // printf("Sorted array (Bubble Sort):\n");
+    // printArray(arr, n);
+
+    // // Re-seed array for another sort
+    // seedArray(arr, n);
+    // printf("Original array:\n");
+    // printArray(arr, n);
+
+    // // Insertion Sort
+    // insertionSort(arr, n);
+    // printf("Sorted array (Insertion Sort):\n");
+    // printArray(arr, n);
 
     // Re-seed array for another sort
     seedArray(arr, n);
-    printf("Original array:\n");
-    printArray(arr, n);
+    // printf("Original array:\n");
+    // printArray(arr, n);
 
-    // Insertion Sort
-    insertionSort(arr, n);
-    printf("Sorted array (Insertion Sort):\n");
-    printArray(arr, n);
-
-    // Re-seed array for another sort
-    seedArray(arr, n);
-    printf("Original array:\n");
-    printArray(arr, n);
+    printf("Selection sort started:\n");
 
     // Selection Sort
     selectionSort(arr, n);
-    printf("Sorted array (Selection Sort):\n");
-    printArray(arr, n);
+    // printf("Sorted array (Selection Sort):\n");
+    // printArray(arr, n);
+    printf("Selection sort complete:\n");
 
-    // Re-seed array for Merge Sort
-    seedArray(arr, n);
-    printf("Original array:\n");
-    printArray(arr, n);
 
-    // Merge Sort
-    mergeSort(arr, 0, n - 1);
-    printf("Sorted array (Merge Sort):\n");
-    printArray(arr, n);
+    // // Re-seed array for Merge Sort
+    // seedArray(arr, n);
+    // printf("Original array:\n");
+    // printArray(arr, n);
+
+    // // Merge Sort
+    // mergeSort(arr, 0, n - 1);
+    // printf("Sorted array (Merge Sort):\n");
+    // printArray(arr, n);
 
     // Re-seed array for Quick Sort
     seedArray(arr, n);
-    printf("Original array:\n");
-    printArray(arr, n);
+
+    // printf("Original array:\n");
+    // printArray(arr, n);
 
     // Quick Sort
+    printf("Quick sort started:\n");
     quickSort(arr, 0, n - 1);
-    printf("Sorted array (Quick Sort):\n");
-    printArray(arr, n);
+    // printf("Sorted array (Quick Sort):\n");
+    // printArray(arr, n);
+    printf("Quick sort complete:\n");
+
 
     return 0;
 }
